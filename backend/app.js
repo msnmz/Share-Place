@@ -27,8 +27,6 @@ app.use((error, req, res, next) => {
   res.json({ message: error.message || 'An unknown error occurred!' });
 });
 
-console.log({ MONGODB_STR: process.env.MONGODB_STR })
-
 mongoose
   .connect(process.env.MONGODB_STR)
   .then(() => {
